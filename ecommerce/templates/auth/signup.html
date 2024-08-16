@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block  title %}
+signup
+{% endblock %}
+{% block  main %}
+SignUp 
+    <form  action='/auth/signup' method="post">
+        {% csrf_token %}
+        <input type="text"  name="email" placeholder="Enter Email">
+        <input type="text"  name="name" placeholder="Enter Name">
+        <input type="text"  name="address" placeholder="Enter Address">
+        <input type="text"  name="password" placeholder="Enter Password">
+        <input type="submit">
+    </form >
+
+    <a href="/auth/signin">
+        signin
+    </a>
+{% endblock %}

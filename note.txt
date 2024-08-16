@@ -1,0 +1,30 @@
+step0/ initialize git  and    create .gitignore file main directory 
+step1/ create virtual env and activate  it
+            python -m venv myvenv
+step2/ install django 
+            pip install django
+step3/ create django project 
+        django-admin startproject ecommerce
+step4/ create a requirements.txt file  in the same  where manage.py is located.
+step5/ Create the .env in the same where manage.py present
+step6/ create folder for template in same where manage.py locate,
+        inside setting.py you need to define the path of our templates    
+        inside dirs 
+step8/ create a static folder in same where manage.py locate,
+step9/ create seprate app in django for different functionality
+        python manage.py  startapp 
+        *we need to tell the main app setting.py that we create a app , so there inside 
+        Install app []  give app name  
+__________________________________________________________________________________________
+Note : 
+ 1/ inside the main app which  contain the settings.py not recommended to create the view.py
+ 2/ Use underscores for readability: If the name consists of multiple words, use underscores   
+    (_) to separate them for better readability.
+3/check django  version
+    python -m django --version
+
+
+4/ Create a folder name static inside that you need to keep all your images, css ,js code
+a/ assests/images :  inside static create  a folder name assests where you keep all your images
+b/ css 
+c/ js 

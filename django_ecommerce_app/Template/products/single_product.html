@@ -1,0 +1,26 @@
+{% extends "base/base.html" %}
+
+{% block main%}
+<div class="product-item">
+
+
+    {% if product.product_different_images.all %}
+        {% with product.product_different_images.all.0 as first_image %}
+        <img src="{{ first_image.product_image.url }}" alt="{{ product.product_name }}" class="product-image" style="width: 300px; height:200px;"> 
+ {% endwith %}
+    {% else %}
+        <p>No image available</p>
+    {% endif %}
+
+    <!-- Display the product details -->
+    <a href="{% url 'product_detail' slug=product.product_slug %}">
+     
+        {{ product.product_name }}
+    </a> 
+
+        {{product.product_slug}}
+    <p><strong>Category:</strong> {{ product.category_name.category_name }}</p>
+    <p><strong>Price:</strong> {{ product.price }}</p>
+    <p><strong>Description:</strong> {{ product.description }}</p>
+</div>
+{% endblock%}
